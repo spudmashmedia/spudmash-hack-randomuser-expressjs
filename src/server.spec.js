@@ -1,3 +1,6 @@
+/*
+ * Integration Tests
+ */
 "use strict"
 
 var request = require('supertest')

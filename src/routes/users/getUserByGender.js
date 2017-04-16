@@ -1,7 +1,10 @@
+/*
+ * getuserByGender
+ */
 "use strict"
 
-function getUserById(req, res, next) {
-    console.log("----] inside getUserById")
+function getUserByGender(req, res, next) {
+    console.log("----] inside getuserByGender")
     let gender = req.params.gender
     let conn = res.locals.conn
 
@@ -15,4 +18,4 @@ function getUserById(req, res, next) {
         })
 }
 
-module.exports = getUserById
+module.exports = getUserByGender

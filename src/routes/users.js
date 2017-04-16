@@ -9,7 +9,7 @@ var proxy = require('../model/usrproxy')
 
 // controllers
 var getUsersCtrl = require('./users/getUsers')
-var getUserByIdCtrl = require('./users/getUserById')
+var getUserByGenderCtrl = require('./users/getUserByGender')
 
 
 // inject proxy via middleware
@@ -21,6 +21,6 @@ router.use(function (req, res, next) {
 })
 
 router.get('/', getUsersCtrl)
-router.get('/:gender', getUserByIdCtrl)
+router.get('/:gender', getUserByGenderCtrl)
 
 module.exports = router

@@ -1,10 +1,10 @@
 "use strict"
 
-var getuserById = require('./getUserById')
+var getUserByGender = require('./getUserByGender')
 var chai = require('chai')
 var expect = chai.expect
 
-xdescribe('getUserById', () => {
+xdescribe('getUserByGender', () => {
     it('should return correct values', () =>{
 
     })

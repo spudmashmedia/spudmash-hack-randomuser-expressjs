@@ -1,0 +1,12 @@
+{
+    "apps" :[{
+        "name": "user-api",
+        "script": "dist/api.js",
+        "instances": 0,
+        "exec_mode": "cluster",
+        "watch": ["dist"],
+        "env": {
+            "NODE_ENV": "production"
+        }
+    }]
+}

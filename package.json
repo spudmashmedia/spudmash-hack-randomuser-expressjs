@@ -1,0 +1,30 @@
+{
+  "name": "usersapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "develop": "node-dev src/server.js",
+    "start": "pm2 start pm2-processes.json",
+    "stop": "pm2 stop user-api | pm2 delete user-api",
+    "monitor": "pm2 monit",
+    "test": "mocha 'src/**/*.spec.js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.10",
+    "express": "^4.15.2",
+    "mongoose": "^4.9.4",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs": "0.0.1-security",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0",
+    "webpack": "^2.4.1"
+  }
+}

@@ -15,8 +15,13 @@ var getUserByGenderCtrl = require('./users/getUserByGender')
 // inject proxy via middleware
 console.log("----] inside getUsers")
 router.use(function (req, res, next) {
-    res.locals.proxy = proxy
-    res.locals.conn = rp
+    req.app = {
+        locals: {
+            proxy: proxy,
+            conn: rp,
+        }
+    }
+
     next()
 })
 

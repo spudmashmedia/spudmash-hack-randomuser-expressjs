@@ -6,9 +6,9 @@
 function getUserByGender(req, res, next) {
     console.log("----] inside getuserByGender")
     let gender = req.params.gender
-    let conn = res.locals.conn
+    let conn = req.app.locals.conn
 
-    res.locals.proxy(conn, gender)
+    req.app.locals.proxy(conn, gender)
         .then(function (data) {
             res.send(data)
             next()

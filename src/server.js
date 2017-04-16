@@ -8,7 +8,7 @@ var logger = bunyan.createLogger({
 })
 var users = require('./routes/users')
 
-let port = 8080 // change this to environment variable
+let port = process.env.PORT || 8080 // change this to environment variable
 let baseUri = '/api/v1' //change this to environment variable
 
 // users middleware (loads routes + controllers)
@@ -29,7 +29,7 @@ var server = app.listen(port, function (err) {
         return
     }
 
-    console.log('Server started http://localhost:8080')
+    console.log('Server started http://localhost:' + port)
 })
 
 module.exports = server

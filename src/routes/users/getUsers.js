@@ -2,9 +2,9 @@
 
 function getUsers(req, res, next) {
     console.log("----] inside getUsers")
-    let conn = res.locals.conn
+    let conn = req.app.locals.conn
 
-    res.locals.proxy(conn, 'male')
+    req.app.locals.proxy(conn, 'male')
         .then(function (data) {
             res.send(data)
             next()
